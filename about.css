@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  animation: page_load 2s;
+}
+*:hover {
+  transition: 1s;
+}
+.logo {
+  height: 3.125rem;
+}
+body {
+  background-color: rgb(245, 245, 245);
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.main_navbar {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  margin: auto;
+  padding: 1.25rem;
+  justify-content: space-between;
+}
+.nav_list li {
+  display: inline;
+  list-style: none;
+  padding: 0.625rem 1.25rem;
+}
+.nav_list li a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+.nav_list li a:hover {
+  color: brown;
+  transition: 0.5s;
+}
+.about_main {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  margin: auto;
+  padding: 1.25rem;
+  justify-content: space-between;
+}
+.details {
+  margin-left: 8%;
+  margin-top: 15%;
+}
+
+.details h1 {
+  font-size: 3.125rem;
+  color: black;
+  margin-bottom: 1.25rem;
+}
+span {
+  color: rgb(255, 0, 0);
+}
+span:hover {
+  color: rgb(0, 0, 0);
+  transition: 1.5s;
+}
+.details p {
+  font-size: 1.25rem;
+}
+
+.details a:hover {
+  background: coral;
+  color: black;
+  transition: 1s;
+}
+
+.nav_list li a:after {
+  content: "";
+  position: absolute;
+  padding: 0px 0px;
+  background-color: brown;
+  height: 0.1875rem;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.nav_list li a:hover::after {
+  width: 100%;
+}
+
+.contacts_list i {
+  display: flex;
+  padding-bottom: 3.125rem;
+}
+.contacts_list {
+  margin-top: 6.25rem;
+  margin-right: -9%;
+  animation: contact_load 3s ease;
+}
+.contacts_list i:hover {
+  color: gold;
+}
+.contacts_list li {
+  list-style: none;
+}
+.contacts_list li a {
+  text-decoration: none;
+}
+.main_footer {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(228, 216, 216);
+  padding: 1.25rem;
+  margin-top: 3.625rem;
+}
+h3 {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  animation: feel_free 2s ease;
+}
+.footer span {
+  color: rgb(0, 0, 0);
+  animation: span 3s ease;
+}
+p {
+  color: brown;
+  animation: mail 3s ease;
+}
+.footer i {
+  color: brown;
+}
+
+@keyframes page_load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes contact_load {
+  0% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes feel_free {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes mail {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .main_navbar {
+    width: 100%;
+  }
+  .hero {
+    position: unset;
+  }
+  .logo {
+    height: 1.5625rem;
+  }
+  .main_navbar {
+    display: flex;
+    width: 100%;
+    padding: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+  .nav_list li {
+    padding: 0.3125rem 0.3125rem;
+  }
+  .nav_list li a {
+    position: unset;
+    font-size: 0.75rem;
+  }
+  * {
+    margin-top: 0.625rem;
+    padding: 0;
+  }
+  .about_main {
+    width: 100%;
+    padding: 0.625rem;
+    height: 47%;
+  }
+  .details {
+    margin-left: 8%;
+    margin-top: 60%;
+  }
+
+  .details h1 {
+    font-size: 1.75rem;
+    color: black;
+    margin-bottom: 3.125rem;
+    margin-left: -5%;
+  }
+  .details p {
+    font-size: 0.9375rem;
+    margin-left: -5%;
+
+    margin-bottom: 50%;
+  }
+  .contacts_list i {
+    padding-bottom: 1.25rem;
+  }
+  .contacts_list {
+    margin-top: 3.125rem;
+    margin-right: -2%;
+  }
+  .main_footer {
+    width: 100%;
+    padding: 0.625rem;
+    margin-top: 8.125rem;
+  }
+  h3 {
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    font-size: 0.9375rem;
+  }
+  .footer span {
+    color: rgb(0, 0, 0);
+    font-size: 0.6875rem;
+  }
+  p {
+    color: brown;
+    font-size: 0.6875rem;
+    margin-top: -0.3125rem;
+  }
+  .contacts_list li a {
+    color: black;
+    font-size: 0.625rem;
+  }
+}

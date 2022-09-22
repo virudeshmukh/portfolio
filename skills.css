@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  animation: page_load 2s;
+}
+*:hover {
+  transition: 1s;
+}
+.logo {
+  height: 3.125rem;
+}
+body {
+  background-color: rgb(245, 245, 245);
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.main_navbar {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  margin: auto;
+  padding: 1.25rem;
+  justify-content: space-between;
+}
+.nav_list li {
+  display: inline;
+  list-style: none;
+  padding: 0.625rem 1.25rem;
+}
+.nav_list li a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-weight: bold;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+}
+.nav_list li a:hover {
+  color: brown;
+  transition: 0.5s;
+}
+
+.nav_list li a:after {
+  content: "";
+  position: absolute;
+  padding: 0px 0px;
+  background-color: brown;
+  height: 0.1875rem;
+  width: 0;
+  left: 0;
+  bottom: -0.3125rem;
+  transition: 0.3s;
+}
+.nav_list li a:hover::after {
+  width: 100%;
+}
+.skills {
+  width: 100%;
+  height: 55%;
+  padding: 1.25rem;
+  background-color: rgb(240, 232, 229);
+  margin-top: 10%;
+  padding-left: 15%;
+  justify-content: center;
+  padding-top: 3.125rem;
+}
+.skills_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  list-style: none;
+  margin-top: 3.125rem;
+}
+.skills_list li {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: list 3s ease;
+}
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+  animation: text 3s ease;
+}
+hr {
+  margin-left: -13.4375rem;
+  color: rgb(255, 0, 0);
+  font-weight: bolder;
+}
+.skills_list li i {
+  text-decoration: none;
+  color: brown;
+}
+.skills_list li i:hover {
+  color: rgb(15, 15, 14);
+}
+.sql {
+  font-size: 3.125rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0.625rem;
+}
+@keyframes page_load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes list {
+  0% {
+    transform: translateX(10000%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes text {
+  0% {
+    transform: translateX(-5000%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  .main_navbar {
+    width: 100%;
+  }
+  .hero {
+    position: unset;
+  }
+  .logo {
+    height: 1.5625rem;
+  }
+  .main_navbar {
+    display: flex;
+    width: 100%;
+    padding: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+  .nav_list li {
+    padding: 0.3125rem 0.3125rem;
+  }
+  .nav_list li a {
+    position: unset;
+    font-size: 0.75rem;
+  }
+  * {
+    margin-top: 0.625rem;
+    padding: 0;
+  }
+  .skills {
+    height: 35%;
+    padding: 0.625rem;
+
+    margin-top: 35%;
+    padding-left: 15%;
+
+    padding-top: 1.5625rem;
+  }
+  .skills_list {
+    margin-top: 0;
+    font-size: 0.3125rem;
+    width: 100%;
+    margin-left: -1.25rem;
+  }
+  .skills_list li {
+    padding: 0.625rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .skills_list li i {
+    text-decoration: none;
+    color: brown;
+  }
+  .skills_list li i:hover {
+    color: rgb(15, 15, 14);
+  }
+  .sql {
+    font-size: 1.5625rem;
+
+    margin-bottom: 0.625rem;
+  }
+}
